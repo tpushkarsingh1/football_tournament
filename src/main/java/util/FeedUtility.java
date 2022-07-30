@@ -21,9 +21,4 @@ ObjectMapper mapper = new ObjectMapper();
         };
         return tournament;
     }
-
-    public static void main(String[] args) {
-        DataParser parser = new DataParser();
-        new FeedUtility().fetchTournamentFeed(1);
-    }
 }

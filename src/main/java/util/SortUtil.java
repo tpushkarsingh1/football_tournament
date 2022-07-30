@@ -6,6 +6,6 @@ import java.util.Map;
 
 public class SortUtil {
 
-    public void sortScoreBoard(Map<Integer, ScoreBoard> responseMap){
+    public void sortScoreBoard(Map<String, ScoreBoard> responseMap){
     }
 }

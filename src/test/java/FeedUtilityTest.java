@@ -10,10 +10,7 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.MockitoRule;
 import org.mockito.quality.Strictness;
-import util.DataParser;
 import util.FeedUtility;
-
-import java.time.LocalDateTime;
 import java.util.Arrays;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -23,8 +20,6 @@ FeedUtility feedUtility;
 
 @Rule
 public MockitoRule rule = MockitoJUnit.rule().strictness(Strictness.STRICT_STUBS);
-
-
     @Test
     public void fetchTournamentFeedForSource1() {
         Tournament nullScoreGame = new Tournament(Arrays.asList(new Game(new Team(WordCupTestConstant.TEAMA,null),new Team(WordCupTestConstant.TEAMB,null),WordCupTestConstant.TEAM1_GAME_ID,WordCupTestConstant.TEST_MATCH_DATE)));
@@ -37,6 +32,4 @@ public MockitoRule rule = MockitoJUnit.rule().strictness(Strictness.STRICT_STUBS
         Tournament tournament = feedUtility.fetchTournamentFeed(10);
         Assert.assertEquals(tournament,null);
     }
-
-
 }

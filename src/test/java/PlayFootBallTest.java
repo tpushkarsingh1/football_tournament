@@ -1,6 +1,5 @@
 import dto.Game;
 import dto.Team;
-import exceptions.InvalidDataException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -17,7 +16,6 @@ import worldcup.impl.PlayFootBall;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PlayFootBallTest {
-
     @InjectMocks
     PlayFootBall playFootBall;
 
@@ -31,15 +29,17 @@ public class PlayFootBallTest {
 
     @Test
     public void checkBeginGame() {
-       Assert.assertTrue((playFootBall.beginGame(1)).size()>1);
+       Assert.assertTrue((playFootBall.beginGame(1)).size()==5);
+    }
+
+    @Test
+    public void checkBeginGameCheckTopScorer() {
+        Assert.assertEquals((playFootBall.beginGame(1)).entrySet().stream().findFirst().get().getValue().gameId(),"UruItl1");
     }
 
 
-    @Test(expected = InvalidDataException.class)
-    public void checkBeginGameForInvalidSource() {
+    @Test(expected = IllegalArgumentException.class)
+    public void checkBeginGameForInvalidSource() throws Exception {
         playFootBall.beginGame(10);
-    }
-    private Game createGame(){
-        return new Game(new Team(WordCupTestConstant.TEAMA,WordCupTestConstant.TEST_SCORE_0),new Team(WordCupTestConstant.TEAMB,WordCupTestConstant.TEST_SCORE_1),WordCupTestConstant.TEAM1_GAME_ID, WordCupTestConstant.TEST_MATCH_DATE);
     }
 }

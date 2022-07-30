@@ -28,20 +28,20 @@ public class SortUtilTest {
     }
     @Test
     public void checkCorrectSorting(){
-        ScoreBoard score1 = new ScoreBoard(WordCupTestConstant.TEAMA,WordCupTestConstant.TEAMB,3,2,5,1);
-        ScoreBoard score2 = new ScoreBoard(WordCupTestConstant.TEAMC,WordCupTestConstant.TEAMD,0,1,1,2);
-        ScoreBoard score3 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,2,2,4,3);
-        ScoreBoard score4 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,2,2,4,4);
-        Map<Integer,ScoreBoard> dataMap = new HashMap<>();
+        ScoreBoard score1 = new ScoreBoard(WordCupTestConstant.TEAMA,WordCupTestConstant.TEAMB,3,2,5,WordCupTestConstant.TEAMA);
+        ScoreBoard score2 = new ScoreBoard(WordCupTestConstant.TEAMC,WordCupTestConstant.TEAMD,0,1,1,WordCupTestConstant.TEAMC);
+        ScoreBoard score3 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,2,2,4,WordCupTestConstant.TEAME);
+        ScoreBoard score4 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,2,2,4,WordCupTestConstant.TEAMG);
+        Map<String,ScoreBoard> dataMap = new HashMap<>();
         dataMap.put(score1.gameId(),score1);
         dataMap.put(score2.gameId(),score2);
         dataMap.put(score3.gameId(),score3);
         dataMap.put(score4.gameId(),score4);
-        List<Integer> expectedResultGameId = Arrays.asList(score1.gameId(),score4.gameId(),score3.gameId(),score2.gameId());
+        List<String> expectedResultGameId = Arrays.asList(score1.gameId(),score4.gameId(),score3.gameId(),score2.gameId());
         sortUtil.sortScoreBoard(dataMap);
         while (dataMap.size()>0) {
-            Integer actualTopScorer = dataMap.entrySet().stream().findFirst().get().getValue().gameId();
-            Optional<Integer> expectedTopScorer = expectedResultGameId.stream().findFirst();
+            String actualTopScorer = dataMap.entrySet().stream().findFirst().get().getValue().gameId();
+            Optional<String> expectedTopScorer = expectedResultGameId.stream().findFirst();
             assertEquals(actualTopScorer, expectedTopScorer.get());
             dataMap.remove(actualTopScorer);
             expectedResultGameId.remove(expectedTopScorer);

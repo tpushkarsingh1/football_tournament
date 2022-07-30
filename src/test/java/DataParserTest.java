@@ -15,7 +15,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.MockitoRule;
 import org.mockito.quality.Strictness;
 import util.DataParser;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
@@ -29,7 +28,6 @@ ObjectMapper mapper;
 
     @Rule
     public MockitoRule rule = MockitoJUnit.rule().strictness(Strictness.STRICT_STUBS);
-
     @Test
     public void checkGoalWithNullValueAreFiltered() throws IOException {
         Tournament nullScoreGame = new Tournament(Arrays.asList(new Game(new Team(WordCupTestConstant.TEAMA,null),new Team(WordCupTestConstant.TEAMB,null),WordCupTestConstant.TEAM1_GAME_ID,WordCupTestConstant.TEST_MATCH_DATE)));
@@ -37,7 +35,6 @@ ObjectMapper mapper;
         Assert.assertEquals(parser.fetchDataForFootball(mapper).games().size(),0);
 
     }
-
     @Test
     public void checkGoalWithNegativeValueAreFiltered() throws IOException {
         Tournament nullScoreGame = new Tournament(Arrays.asList(new Game(new Team(WordCupTestConstant.TEAMA,-1),new Team(WordCupTestConstant.TEAMB,null),WordCupTestConstant.TEAM1_GAME_ID,WordCupTestConstant.TEST_MATCH_DATE)));
