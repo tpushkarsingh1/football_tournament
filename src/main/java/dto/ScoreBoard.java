@@ -1,6 +1,6 @@
 package dto;
 
-public record ScoreBoard(String homeTeamName,String awayTeamName,Integer homeTeamScore,Integer awayTeamScore,Integer totalMatchCount,Integer gameId) implements Comparable {
+public record  ScoreBoard(String homeTeamName,String awayTeamName,Integer homeTeamScore,Integer awayTeamScore,Integer totalMatchCount,Integer gameId) implements Comparable {
 
     @Override
     public int compareTo(Object o) {

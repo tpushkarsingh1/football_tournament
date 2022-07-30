@@ -4,14 +4,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
+import org.powermock.modules.junit4.PowerMockRunner;
 import util.SortUtil;
 
 import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(PowerMockRunner.class)
+@PowerMockIgnore("jdk.internal.reflect.*")
 public class SortUtilTest {
 
     @InjectMocks
@@ -23,10 +25,10 @@ public class SortUtilTest {
     }
     @Test
     public void checkCorrectSorting(){
-        ScoreBoard score1 = new ScoreBoard(WordCupTestConstant.TEAMA,WordCupTestConstant.TEAMB,WordCupTestConstant.TEST_SCORE,0,5,1);
-        ScoreBoard score2 = new ScoreBoard(WordCupTestConstant.TEAMC,WordCupTestConstant.TEAMD,WordCupTestConstant.TEST_SCORE,0,1,2);
-        ScoreBoard score3 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,WordCupTestConstant.TEST_SCORE,0,4,3);
-        ScoreBoard score4 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,WordCupTestConstant.TEST_SCORE,0,4,4);
+        ScoreBoard score1 = new ScoreBoard(WordCupTestConstant.TEAMA,WordCupTestConstant.TEAMB,3,2,5,1);
+        ScoreBoard score2 = new ScoreBoard(WordCupTestConstant.TEAMC,WordCupTestConstant.TEAMD,0,1,1,2);
+        ScoreBoard score3 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,2,2,4,3);
+        ScoreBoard score4 = new ScoreBoard(WordCupTestConstant.TEAME,WordCupTestConstant.TEAMF,2,2,4,4);
         Map<Integer,ScoreBoard> dataMap = new HashMap<>();
         dataMap.put(score1.gameId(),score1);
         dataMap.put(score2.gameId(),score2);

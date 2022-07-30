@@ -1,3 +1,3 @@
 package dto;
 
-public record Game(Team homeTeamName,Team awayTeam,String gameId,Integer score){}
+public record Game(Team homeTeam, Team awayTeam, String gameId, String matchDate){}

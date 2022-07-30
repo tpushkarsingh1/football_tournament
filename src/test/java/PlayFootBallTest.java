@@ -7,14 +7,21 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
+import org.powermock.modules.junit4.PowerMockRunner;
 import worldcup.impl.PlayFootBall;
 
-@RunWith(MockitoJUnitRunner.class)
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+
+@RunWith(PowerMockRunner.class)
+@PowerMockIgnore("jdk.internal.reflect.*")
 public class PlayFootBallTest {
 
     @InjectMocks
-    PlayFootBall playFootBall = new PlayFootBall();
+    PlayFootBall playFootBall;
 
     @Before
     public void setup() {
@@ -32,6 +39,6 @@ public class PlayFootBallTest {
         playFootBall.beginGame(10);
     }
     private Game createGame(){
-        return new Game(new Team(WordCupTestConstant.TEAMA),new Team(WordCupTestConstant.TEAMB),WordCupTestConstant.TEAM1_GAME_ID,WordCupTestConstant.TEST_SCORE);
+        return new Game(new Team(WordCupTestConstant.TEAMA,WordCupTestConstant.TEST_SCORE_0),new Team(WordCupTestConstant.TEAMB,WordCupTestConstant.TEST_SCORE_1),WordCupTestConstant.TEAM1_GAME_ID, WordCupTestConstant.TEST_MATCH_DATE);
     }
 }
