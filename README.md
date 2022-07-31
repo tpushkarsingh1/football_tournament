@@ -1,5 +1,5 @@
 # SportRadar_WorldCup_Tournament
-Steps to run the project:
+**Steps to run the project:**
 1. git clone and checkout the project from master branch
 2. perform maven clean install (mvn clean install).
 3. A dummy data set of football data feed is placed under resources.
@@ -7,7 +7,9 @@ Steps to run the project:
 5. Add a new Data in the feedData.json file to test.
 6. All source code are present under src/main/java.
 7. All test cases are present under src/test/java.
-Assumptions:
+
+**Assumptions:**
+
 1. A live data feed is imitated in resources/feedData.json
 2. The feed send Game Data.
 3. Goal will be incremented by 1 unit only irrespective of any value received more than 1.
