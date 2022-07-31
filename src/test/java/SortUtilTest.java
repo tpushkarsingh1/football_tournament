@@ -38,6 +38,7 @@ public class SortUtilTest {
         dataMap.put(score2.gameId(),score2);
         dataMap.put(score3.gameId(),score3);
         dataMap.put(score4.gameId(),score4);
+        //expected resultset based on mock input data. All records are iterated and validated.
         List<String> expectedResultGameId = new LinkedList<>(Arrays.asList(score1.gameId(),score4.gameId(),score3.gameId(),score2.gameId()));
         var finalScoreBoard = sortUtil.sortScoreBoard(dataMap).stream().map(s->s.gameId()).collect(Collectors.toList());
         while (finalScoreBoard.size()>0) {

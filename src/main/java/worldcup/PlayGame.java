@@ -2,8 +2,8 @@ package worldcup;
 
 import dto.ScoreBoard;
 
-import java.util.Map;
+import java.util.List;
 
 public interface PlayGame {
-    Map<String, ScoreBoard> beginGame(Integer feedSource);
+    List<ScoreBoard> beginGame(Integer feedSource);
 }

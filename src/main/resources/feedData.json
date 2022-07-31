@@ -25,6 +25,18 @@
       "gameId": "ArgAus1"
     },
     {
+      "matchDate": "21 Nov 12:45",
+      "homeTeam": {
+        "teamName": "Argentina",
+        "teamScore": "8"
+      },
+      "awayTeam": {
+        "teamName": "Australia",
+        "teamScore": "0"
+      },
+      "gameId": "ArgAus1"
+    },
+    {
       "matchDate": "21 Nov 12:48",
       "homeTeam": {
         "teamName": "Argentina",
@@ -88,7 +100,7 @@
       "matchDate": "21 Nov 12:58",
       "homeTeam": {
         "teamName": "Germany",
-        "teamScore": "1"
+        "teamScore": "0"
       },
       "awayTeam": {
         "teamName": "France",
@@ -116,7 +128,7 @@
       },
       "awayTeam": {
         "teamName": "Canada",
-        "teamScore": "1"
+        "teamScore": "0"
       },
       "gameId": "MaxCan1"
     },
@@ -124,7 +136,7 @@
       "matchDate": "21 Nov 13:03",
       "homeTeam": {
         "teamName": "Germany",
-        "teamScore": "1"
+        "teamScore": "0"
       },
       "awayTeam": {
         "teamName": "France",
@@ -136,7 +148,7 @@
       "matchDate": "21 Nov 13:04",
       "homeTeam": {
         "teamName": "Argentina",
-        "teamScore": "1"
+        "teamScore": "0"
       },
       "awayTeam": {
         "teamName": "Australia",
@@ -164,7 +176,7 @@
       },
       "awayTeam": {
         "teamName": "France",
-        "teamScore": "1"
+        "teamScore": "0"
       },
       "gameId": "gerFra1"
     },
@@ -200,7 +212,7 @@
       },
       "awayTeam": {
         "teamName": "Italy",
-        "teamScore": "1"
+        "teamScore": "0"
       },
       "gameId": "UruItl1"
     },
@@ -472,7 +484,7 @@
       "matchDate": "21 Nov 13:59",
       "homeTeam": {
         "teamName": "Spain",
-        "teamScore": "0"
+        "teamScore": "1"
       },
       "awayTeam": {
         "teamName": "Brazil",
@@ -719,6 +731,18 @@
         "teamScore": "0"
       },
       "gameId": "SpaBraz1"
+    },
+    {
+      "matchDate": "21 Nov 12:45",
+      "homeTeam": {
+        "teamName": "Argentina",
+        "teamScore": "-8"
+      },
+      "awayTeam": {
+        "teamName": "Australia",
+        "teamScore": "0"
+      },
+      "gameId": "ArgAus1"
     }
   ]
 }

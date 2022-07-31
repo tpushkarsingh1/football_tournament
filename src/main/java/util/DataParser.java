@@ -28,7 +28,6 @@ public class DataParser {
 
         }
         catch (Exception e) {
-            e.printStackTrace();
             logger.error("Error parsing Data inside fetchDataFromResources");
         }
         return tournament;
