@@ -15,6 +15,5 @@ Assumptions:
    </br> a) No. of valid goals secured in a Game. If a negative/null data received is the most recent entry it will be ignored.
    </br> b) The latest Game received by the team. In case of matching goal counts, match having the latest goal secured will be placed above.
 6. Based on the sorting as mentioned in step4. output should be
-</br>
-</br>
+
 ![img.JPG](img.JPG)
