@@ -5,7 +5,8 @@ Steps to run the project:
 3. A dummy data set of football data feed is placed under resources.
 4. Navigate to Starter.java and execute the main method.
 5. Add a new Data in the feedData.json file to test.
-
+6. All source code are present under src/main/java.
+7. All test cases are present under src/test/java.
 Assumptions:
 1. A live data feed is imitated in resources/feedData.json
 2. The feed send Game Data.
