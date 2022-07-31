@@ -1,7 +1,7 @@
 # SportRadar_WorldCup_Tournament
 **Steps to run the project:**
 1. git clone and checkout the project from master branch
-2. perform maven clean install (mvn clean install).
+2. Perform maven clean install (mvn clean install). Project is built using Java17.
 3. A dummy data set of football data feed is placed under resources.
 4. Navigate to Starter.java and execute the main method.
 5. Add a new Data in the feedData.json file to test.
