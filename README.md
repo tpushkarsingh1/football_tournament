@@ -11,8 +11,8 @@
 **Assumptions:**
 
 1. A live data feed is imitated in resources/feedData.json
-2. The feed send Game Data.
-3. Goal will be incremented by 1 unit only irrespective of any value received more than 1.
+2. The feed contains complete Game Data.
+3. Goal will be incremented by only 1 unit only at a time, irrespective any value received greater than 1.
 4. Game having a valid score will be considered for computation -ve/null goals feeds are rejected.
 5. The sorting is based on
    </br> a) No. of valid goals secured in a Game. If a negative/null data received is the most recent entry it will be ignored.
